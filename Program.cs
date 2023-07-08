@@ -49,6 +49,16 @@ namespace HelloWorld
             ); // same database commands work for containers as well.
             Console.WriteLine($"New database:\t{database.Id}");
             Console.WriteLine($"New container:\t{container.Id}");
+
+            // C# record representing an item in the container
+             public record Product(
+                 string id,
+                 string categoryId,
+                 string categoryName,
+                 string name,
+                 int quantity,
+                 bool sale
+             );
         }
     }
 }
